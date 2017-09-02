@@ -27,28 +27,19 @@ h2 {
         li {
             color: $red;
             font-size: 100px;
-            .box {
-              margin: 10px;
+            a {
+                &.link {
+                    color: $red;
+                }
+                &:hover {
+                    color: #000;
+                }
             }
         }
     }
 }
-
-.container {
-    width: $width;
-}
-
-.container ul {
-    margin-top: 100px;
-}
-
-.container ul li {
-    color: $red;
-    font-size: 100px;
-}
-
-.container ul li .box {
-
-
-margin: 10px;
+//跳脫字元
+$classname : name1;
+##{$classname} {
+    margin: 100px;
 }

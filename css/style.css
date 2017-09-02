@@ -18,18 +18,10 @@ h2 {
     .container ul li {
       color: #f00;
       font-size: 100px; }
-      .container ul li .box {
-        margin: 10px; }
+      .container ul li a.link {
+        color: #f00; }
+      .container ul li a:hover {
+        color: #000; }
 
-.container {
-  width: 800px; }
-
-.container ul {
-  margin-top: 100px; }
-
-.container ul li {
-  color: #f00;
-  font-size: 100px; }
-
-.container ul li .box {
-  margin: 10px; }
+#name1 {
+  margin: 100px; }
