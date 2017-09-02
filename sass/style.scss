@@ -1,0 +1,23 @@
+//var
+$font-h1-size: 300px;
+$red: #f00;
+$width: 800px;
+$font: 'lato'; 
+
+h1 {
+    font-family: $font;
+    font-size: $font-h1-size;
+    color: $red;
+}
+
+h2 {
+
+color: $red;
+
+}
+.box {
+    width: $width;
+    height: $width;
+}
+
+

@@ -1,0 +1,11 @@
+h1 {
+  font-family: "lato";
+  font-size: 300px;
+  color: #f00; }
+
+h2 {
+  color: #f00; }
+
+.box {
+  width: 800px;
+  height: 800px; }
