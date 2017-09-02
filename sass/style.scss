@@ -71,6 +71,7 @@ ul {
     @include box-center();
     height: 300px;
 }
+
 //傳值
 @mixin widths($widths, $align) {
     width: $widths;
@@ -81,11 +82,35 @@ ul {
 .box3 {
     @include widths(200px, center);
 }
+
 .box4 {
     @include widths(400px, left);
 }
+
 //變數在外
-$width : 500px;
+$width: 500px;
 .box5 {
-    @include widths($width,left);
+    @include widths($width, left);
+}
+
+//mixin預設值
+@mixin margins ($top:10px, $bottom:10px, $left:10px, $right:10px) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-left: $left;
+    margin-right: $right;
+}
+
+.box6 {
+    @include margins (20px, 20px);
+}
+
+//null
+@mixin boxs ($width:null, $height:null) {
+    width: $width;
+    height: $height;
+}
+
+.box7 {
+    @include boxs(10px);
 }
