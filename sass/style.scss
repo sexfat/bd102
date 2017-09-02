@@ -38,8 +38,54 @@ h2 {
         }
     }
 }
+
 //跳脫字元
-$classname : name1;
-##{$classname} {
+$classname: name1;
+.#{$classname} {
     margin: 100px;
+}
+
+ul {
+    li {
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                width: $i*10px;
+            }
+        }
+    }
+}
+
+//不傳值
+@mixin box-center() {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+.box1 {
+    @include box-center();
+    height: 200px;
+}
+
+.box2 {
+    @include box-center();
+    height: 300px;
+}
+//傳值
+@mixin widths($widths, $align) {
+    width: $widths;
+    height: $widths;
+    text-align: $align;
+}
+
+.box3 {
+    @include widths(200px, center);
+}
+.box4 {
+    @include widths(400px, left);
+}
+//變數在外
+$width : 500px;
+.box5 {
+    @include widths($width,left);
 }
