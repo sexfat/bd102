@@ -2,8 +2,7 @@
 $font-h1-size: 300px;
 $red: #f00;
 $width: 800px;
-$font: 'lato'; 
-
+$font: 'lato';
 h1 {
     font-family: $font;
     font-size: $font-h1-size;
@@ -11,13 +10,45 @@ h1 {
 }
 
 h2 {
-
-color: $red;
-
+    color: $red;
 }
+
 .box {
     width: $width;
     height: $width;
 }
 
+// nesting
+.container {
+    width: $width;
+    height: 100px;
+    ul {
+        margin-top: 100px;
+        li {
+            color: $red;
+            font-size: 100px;
+            .box {
+              margin: 10px;
+            }
+        }
+    }
+}
 
+.container {
+    width: $width;
+}
+
+.container ul {
+    margin-top: 100px;
+}
+
+.container ul li {
+    color: $red;
+    font-size: 100px;
+}
+
+.container ul li .box {
+
+
+margin: 10px;
+}
