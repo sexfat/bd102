@@ -118,7 +118,7 @@ body {
 header {
   height: 30px; }
 
-.box-line, .btn-small, .btn-medium, .btn-large {
+.btn-small, .btn-medium, .btn-large {
   border: 2px solid #000;
   color: #fff;
   cursor: pointer;

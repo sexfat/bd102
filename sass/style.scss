@@ -120,7 +120,7 @@ $width: 500px;
 @import "layout/header";
 @import "layout/footer";
 //extend
-.box-line {
+%box-line {
     border: 2px solid #000;
     color: #fff;
     cursor: pointer;
@@ -139,7 +139,7 @@ $width: 500px;
     height: 72px;
     font-size: 20px;
     background-color: #f09;
-    @extend .box-line;
+    @extend %box-line;
     @extend .margin-top-20;
    
 }
@@ -149,8 +149,8 @@ $width: 500px;
     height: 150px;
     font-size: 30px;
     background-color: #f00;
-    @extend .box-line;
-     @extend .margin-top-20;
+    @extend %box-line;
+    @extend .margin-top-20;
 }
 
 .btn-large {
@@ -158,6 +158,8 @@ $width: 500px;
     height: 200px;
     font-size: 50px;
     background-color: #333;
-    @extend .box-line;
+    @extend %box-line;
     @extend .margin-top-20;
 }
+
+
