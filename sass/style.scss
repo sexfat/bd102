@@ -265,9 +265,7 @@ $nums_a: 8;
 // .col-md-1 {
 //     width: 8.8888%;
 // }
-
 // $cols : 12;
-
 @mixin grid-col($cols) {
     @for $i from 1 through $cols {
         .col-md-#{$i} {
@@ -276,5 +274,18 @@ $nums_a: 8;
     }
 }
 
-
 @include grid-col(12);
+//each
+// $list: img1 img2 img3;
+@mixin photo ($list) {
+    @each $man in $list {
+        .photo-#{$man} {
+            background:url('images/#{$man}.jpg');
+            @content;
+        }
+    }
+}
+
+@include photo(koko1 imag2 imag3){
+    width: 100px
+}; 

@@ -291,3 +291,15 @@ h5 {
 
 .col-md-12 {
   width: 100%; }
+
+.photo-koko1 {
+  background: url("images/koko1.jpg");
+  width: 100px; }
+
+.photo-imag2 {
+  background: url("images/imag2.jpg");
+  width: 100px; }
+
+.photo-imag3 {
+  background: url("images/imag3.jpg");
+  width: 100px; }
