@@ -203,15 +203,15 @@ h1 {
 }
 
 h2 {
-    font-size: $font_base_size * 2.8 ;
+    font-size: ceil($font_base_size * 2.8);
 }
 
 h3 {
-    font-size:  $font_base_size * 1.6 ;
+    font-size:  ceil($font_base_size * 1.6) ;
 }
 
 h4 {
-   font-size:  $font_base_size *1.3 ;
+   font-size:  ceil($font_base_size *1.3) ;
 }
 
 h5 {
