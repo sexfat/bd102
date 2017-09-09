@@ -117,3 +117,25 @@ body {
 
 header {
   height: 30px; }
+
+.box-line, .btn-small, .btn-medium, .btn-large {
+  border: 2px solid #000;
+  color: #fff; }
+
+.btn-small {
+  width: 300px;
+  height: 72px;
+  font-size: 20px;
+  background-color: #f09; }
+
+.btn-medium {
+  width: 400px;
+  height: 150px;
+  font-size: 30px;
+  background-color: #f00; }
+
+.btn-large {
+  width: 600px;
+  height: 200px;
+  font-size: 50px;
+  background-color: #333; }
