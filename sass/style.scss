@@ -242,18 +242,39 @@ h5 {
 }
 
 //for 迴圈
-$nums : 10;
-$nums_a : 8;
-
+$nums: 10;
+$nums_a: 8;
 @for $i from 1 through $nums {
-    .col_#{$i} { 
+    .col_#{$i} {
         width: 6 * $i;
     }
 }
+
+
 /****分隔****/
 
 @for $i from 1 to $nums_a {
-    .cols_#{$i} { 
+    .cols_#{$i} {
         width: 6 * $i;
     }
 }
+
+
+/****分隔****/
+
+// .col-md-1 {
+//     width: 8.8888%;
+// }
+
+// $cols : 12;
+
+@mixin grid-col($cols) {
+    @for $i from 1 through $cols {
+        .col-md-#{$i} {
+            width: ($i / $cols) * 100%;
+        }
+    }
+}
+
+
+@include grid-col(12);

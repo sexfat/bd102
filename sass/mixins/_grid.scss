@@ -1,0 +1,7 @@
+@mixin grid-col($cols) {
+    @for $i from 1 through $cols {
+        .col-md-#{$i} {
+            width: ($i / $cols) * 100%;
+        }
+    }
+}
