@@ -1,5 +1,10 @@
 .box {
-    color: #ff0;
-    font-size: 100px;
-    margin: 10px;
+    font-size: ceil(10.23px);
+    //無條件進入
+
+    font-size: round(10.43px);
+    //四捨五入
+    font-size: floor(10.93px);
+    //無條件捨去
 }
+
