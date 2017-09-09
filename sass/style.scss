@@ -231,17 +231,29 @@ h5 {
         padding: $paddings;
         @content;
     }
-     
-    
 }
 
 .frames {
-        @include frames(10px) {
-            margin: 20px;
-            width: 30px;
-            font-size: 30px;
-        
+    @include frames(10px) {
+        margin: 20px;
+        width: 30px;
+        font-size: 30px;
     }
 }
 
+//for 迴圈
+$nums : 10;
+$nums_a : 8;
 
+@for $i from 1 through $nums {
+    .col_#{$i} { 
+        width: 6 * $i;
+    }
+}
+/****分隔****/
+
+@for $i from 1 to $nums_a {
+    .cols_#{$i} { 
+        width: 6 * $i;
+    }
+}

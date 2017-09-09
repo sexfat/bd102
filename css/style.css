@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1 {
   font-family: "lato";
   font-size: 300px;
@@ -201,3 +202,55 @@ h5 {
   margin: 20px;
   width: 30px;
   font-size: 30px; }
+
+.col_1 {
+  width: 6; }
+
+.col_2 {
+  width: 12; }
+
+.col_3 {
+  width: 18; }
+
+.col_4 {
+  width: 24; }
+
+.col_5 {
+  width: 30; }
+
+.col_6 {
+  width: 36; }
+
+.col_7 {
+  width: 42; }
+
+.col_8 {
+  width: 48; }
+
+.col_9 {
+  width: 54; }
+
+.col_10 {
+  width: 60; }
+
+/****分隔****/
+.cols_1 {
+  width: 6; }
+
+.cols_2 {
+  width: 12; }
+
+.cols_3 {
+  width: 18; }
+
+.cols_4 {
+  width: 24; }
+
+.cols_5 {
+  width: 30; }
+
+.cols_6 {
+  width: 36; }
+
+.cols_7 {
+  width: 42; }
