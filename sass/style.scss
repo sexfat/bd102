@@ -221,11 +221,27 @@ h5 {
 @include distools(box1, $margin_tops);
 @include distools(box2, 40px);
 @include distools(box3, 80px);
-
 .wrapper {
     @include distools(box4, 100px);
 }
 
+//@content
+@mixin frames($paddings) {
+    .box {
+        padding: $paddings;
+        @content;
+    }
+     
+    
+}
 
+.frames {
+        @include frames(10px) {
+            margin: 20px;
+            width: 30px;
+            font-size: 30px;
+        
+    }
+}
 
 
