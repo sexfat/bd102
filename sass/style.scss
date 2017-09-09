@@ -115,5 +115,17 @@ $width: 500px;
     @include boxs(10px);
 }
 
+//連結當案
+@import "base/var";
+
+.box10 {
+    margin: $margins;
+}
+
+body {
+    font-size: $font-base-size;
+}
 
 
+@import "layout/header";
+@import "layout/footer";

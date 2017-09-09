@@ -102,3 +102,12 @@ ul li:nth-child(20) {
 
 .box7 {
   width: 10px; }
+
+.box10 {
+  margin: 10px; }
+
+body {
+  font-size: 20px; }
+
+header {
+  height: 30px; }
