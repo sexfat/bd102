@@ -1,0 +1,13 @@
+//margin
+//@include distools(box2, 40px);
+
+@mixin distools($name, $margin_top) {
+    .#{$name} {
+        @if ($margin_top) <=20px {
+            margin-top: $margin_top;
+        }
+        @else {
+            margin-top: $margin_top * 2
+        }
+    }
+}
