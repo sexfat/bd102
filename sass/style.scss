@@ -116,16 +116,13 @@ $width: 500px;
 }
 
 //連結當案
-@import "base/var";
+@import "base/setting";
+@import "layout/header";
+@import "layout/footer";
+
 
 .box10 {
     margin: $margins;
 }
 
-body {
-    font-size: $font-base-size;
-}
 
-
-@import "layout/header";
-@import "layout/footer";

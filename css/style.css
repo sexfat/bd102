@@ -103,11 +103,20 @@ ul li:nth-child(20) {
 .box7 {
   width: 10px; }
 
-.box10 {
-  margin: 10px; }
-
 body {
-  font-size: 20px; }
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  letter-spacing: 0.01rem;
+  word-spacing: 2px; }
 
 header {
   height: 30px; }
+
+.box10 {
+  margin: 10px; }
