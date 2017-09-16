@@ -8,8 +8,8 @@ TweenMax.fromTo( ".section_1 .title" , 1 , {
 }, {
    y : 0,
    opacity : 1,
-   repeat : 2,
-   ease : Quad.easeOut
+   delay : 1,
+   ease : Bounce.easeOut
 });
 
 TweenMax.fromTo( ".section_1 .content" , 1 , {
@@ -18,7 +18,7 @@ TweenMax.fromTo( ".section_1 .content" , 1 , {
 }, {
    x : 0,
    opacity : 1,
-   delay : 0.5,
+   delay : 1.5,
    ease : Quad.easeOut
 });
 
