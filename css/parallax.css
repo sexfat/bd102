@@ -5837,3 +5837,12 @@ h1 {
     height: 500px;
     background-color: #d2691e;
     opacity: 0.8; }
+
+.section_3 {
+  background-color: #000;
+  color: #fff; }
+  .section_3 .wrapper {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 140px; }

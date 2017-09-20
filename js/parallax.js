@@ -24,11 +24,24 @@ $(function () {
 
     console.log('section_1 ok');
 
-    //parallax
+    //parallax 全域作用域
     var scene = document.getElementById('scenes');
     var parallax = new Parallax(scene);
 
 
     console.log('parallax ok');
+
+    //tweenmax
+
+    // var objects = ['.text1', '.text2', '.text3', '.text4', '.text5'];
+    TweenMax.staggerFromTo('.com', 1, {
+        opacity: 0,
+        y : -10
+    }, {
+        opacity: 1,
+        y : 0
+
+    }, 0.5);
+    console.log('tween st ok');
 
 });

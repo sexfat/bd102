@@ -27,17 +27,26 @@ h1 {
         margin-right: auto;
         border: 1px solid #2c62de;
         .parallax_area {
-           
             width: 440px;
             height: 500px;
             background-color: #2c62de;
         }
         .parallax_area_01 {
-           
             width: 440px;
             height: 500px;
             background-color: #d2691e;
             opacity: .8
         }
+    }
+}
+
+.section_3 {
+    background-color: #000;
+    color: #fff;
+    .wrapper {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 140px;
     }
 }
