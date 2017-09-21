@@ -79,12 +79,16 @@ $(function () {
             //做事情
             TweenMax.staggerFromTo('.boxarea', 0.5, {
                 opacity: 0,
+                width: '150px',
+                height: '140px',
                 y: -10
             }, {
                 opacity: '+=0.4',
                 y: 0,
+                width: '200px',
+                height: '180px',
                 scale: 1.5,
-                rotation: 360
+                yoyo: true
             }, 0.5);
         });
 

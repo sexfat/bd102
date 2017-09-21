@@ -78,8 +78,8 @@ h1 {
 
 
     .boxarea {
-       width: 150px;
-       height: 140px;
+    //    width: 150px;
+    //    height: 140px;
        position: absolute;
        background-color: #2c62de;
        @for  $i from 1 through 4 {
@@ -93,7 +93,14 @@ h1 {
     }
     .animation_box {
         width: 0;
-        height: 2px;
+        height: 150px;
         background-color: #2c62de;
     }
+}
+
+.section_4 {
+    background-color: #00ff7f ;
+
+
+
 }
