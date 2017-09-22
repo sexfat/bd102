@@ -100,13 +100,117 @@ $(function () {
         move.on('click', function () {
             TweenMax.fromTo('.animation_box', 1, {
                 width: 0
-            },{
-                 width: '100%',
-                 ease: Power4.easeOut
+            }, {
+                width: '100%',
+                ease: Power4.easeOut
             });
             //用to 也同樣可以做到
         });
     });
+
+    //scrollmagic 事件
+
+    // var section_4 = $('.section_4  .title');
+    var controller = new ScrollMagic.Controller();
+
+
+    var tween_title = TweenMax.fromTo(".section_4 .title_4", 1.5, {
+        x: -150,
+        opacity: 0,
+    }, {
+        x: 0,
+        opacity: 1,
+        ease: Power4.easeOut
+    });
+    console.log('scroll magic');
+
+    var scene_t = new ScrollMagic.Scene({
+            triggerElement: "#trigger1",
+            duration: 150,
+            //只出現一次
+            reverse: false,
+            offset: 20
+        })
+        .setTween(tween_title)
+        .addIndicators({
+            name: 'secen 01'
+        })
+        .addTo(controller);
+
+
+
+    var tween_content = TweenMax.from(".section_4 .content_4", 1, {
+        y: 50,
+        opacity: 0,
+    }, {
+        y: 0,
+        opacity: 1,
+        delay: .5,
+        ease: Power4.easeOut
+    });
+
+    var scene_c = new ScrollMagic.Scene({
+            triggerElement: "#trigger2",
+            duration: 150,
+            reverse: false,
+            offset: 20
+        })
+        .setTween(tween_content)
+        .addIndicators({
+            name: 'secen 02'
+        })
+        .addTo(controller);
+
+    console.log('section_4 ok');
+    ////四格動畫
+
+    // TweenMax.staggerFromTo('.wide_4x .item', 1.5, {
+    //     opacity: 0,
+    //     y: -30
+    // }, {
+    //     opacity: 1,
+    //     y: 0
+    // }, 0.8);
+
+    var tween_4x = TweenMax.staggerFromTo('.wide_4x .item', 2, {
+        opacity: 0,
+        y: -30
+    }, {
+        opacity: 1,
+        y: 0
+    }, 0.8);
+
+    var scene_w = new ScrollMagic.Scene({
+            triggerElement: "#trigger3",
+            duration: 250,
+            //只出現一次
+            // reverse: false,
+            offset: 100
+        })
+        .setTween(tween_4x)
+        .addIndicators({
+            name: 'secen 03'
+        })
+        .addTo(controller);
+
+
+    console.log('四格動畫 ok');
+
+    //// 加入class
+    var bgc_scene = new ScrollMagic.Scene({
+            triggerElement: "#trigger4",
+            offset: 200,
+            reverse: false
+        })
+        .setClassToggle('.section_5','bgc')
+        .addIndicators({
+            name: 'secen 05'
+        })
+        .addTo(controller);
+
+
+    console.log('add class ok');
+
 
 
 

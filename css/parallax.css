@@ -5806,6 +5806,61 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  letter-spacing: 0.01rem;
+  word-spacing: 2px; }
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 .col-md-1 {
   width: 8.33333%; }
 
@@ -5886,7 +5941,9 @@ h1 {
     padding-top: 10px; }
     .section_3 .wrapper .comw {
       opacity: 0; }
-  .section_3 #btn_hover, .section_3 #btn_scare, .section_3 #btn_move {
+  .section_3 #btn_hover,
+  .section_3 #btn_scare,
+  .section_3 #btn_move {
     width: 120px;
     height: 30px;
     border: 1px solid #d2691e;
@@ -5920,4 +5977,26 @@ h1 {
     background-color: #2c62de; }
 
 .section_4 {
-  background-color: #00ff7f; }
+  background-color: #ffa500;
+  padding-top: 10%; }
+  .section_4 .wrapper {
+    text-align: center; }
+    .section_4 .wrapper .title_4 {
+      line-height: 4rem; }
+  .section_4 .wide_4x {
+    margin-top: 150px; }
+    .section_4 .wide_4x .item {
+      background-color: #ffe4b5;
+      height: 300px;
+      border: 1px solid #d2691e; }
+
+.section_5 {
+  background-color: #000;
+  background-image: url("https://placem.at/places");
+  background-size: cover;
+  transform-origin: center;
+  transform: scale(1);
+  transition: transform 3s ease-out;
+  will-change: transform; }
+  .section_5.bgc {
+    transform: scale(1.1); }
