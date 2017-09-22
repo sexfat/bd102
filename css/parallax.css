@@ -5995,8 +5995,18 @@ h1 {
   background-image: url("https://placem.at/places");
   background-size: cover;
   transform-origin: center;
-  transform: scale(1);
+  transform: scale(1.2);
   transition: transform 3s ease-out;
   will-change: transform; }
   .section_5.bgc {
-    transform: scale(1.1); }
+    transform: scale(1); }
+
+.section_6 {
+  background-color: #ffa07a;
+  text-align: center; }
+  .section_6 .textscroll_1 {
+    position: relative;
+    top: 300px; }
+  .section_6 .textscroll_2 {
+    position: relative;
+    top: 300px; }
