@@ -91,8 +91,12 @@ $(function () {
     //     delay: .5,
     //     ease: Expo.easeOut
     // },1)
-
     console.log('section_2 ok');
+
+    ////parallax 滾動視差套件 
+
+
+
 
 
 
