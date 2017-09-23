@@ -5928,3 +5928,14 @@ h1 {
     transition-property: background-color;
     transition-duration: 0.5s;
     transition-timing-function: linear; }
+
+.section_5 {
+  background-color: #000;
+  background-image: url("https://placem.at/places");
+  background-size: cover;
+  transform-origin: center;
+  transform: scale(1.5);
+  transition: transform 3s ease-out;
+  will-change: transform; }
+  .section_5.big {
+    transform: scale(1); }

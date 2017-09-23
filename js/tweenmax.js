@@ -130,14 +130,27 @@ $(function () {
     ////增加class
 
 
-  var scene_bg = new ScrollMagic.Scene({
+    var scene_bg = new ScrollMagic.Scene({
             //做事情
             triggerElement: "#trigger3",
             offset: 50,
         })
-        .setClassToggle('.bgc' , 'fadein')
+        .setClassToggle('.bgc', 'fadein')
         .addIndicators({
             name: 'add_class'
+        })
+        .addTo(controller);
+
+
+
+    var scene_big = new ScrollMagic.Scene({
+            //做事情
+            triggerElement: "#trigger4",
+            offset: 150,
+        })
+        .setClassToggle('.section_5', 'big')
+        .addIndicators({
+            name: 'scale'
         })
         .addTo(controller);
 
