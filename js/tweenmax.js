@@ -155,6 +155,20 @@ $(function () {
         .addTo(controller);
 
 
+        ///// 固定住物件
+      var scene_sticky = new ScrollMagic.Scene({
+            //做事情
+            triggerElement: "#trigger5",
+            offset: 150,
+            duration: 450
+        })
+        .setPin('#sticky')
+        .addIndicators({
+            name: 'sticky'
+        })
+        .addTo(controller);
+
+        
 
 
 })

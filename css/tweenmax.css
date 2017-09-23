@@ -5939,3 +5939,13 @@ h1 {
   will-change: transform; }
   .section_5.big {
     transform: scale(1); }
+
+.section_6 {
+  padding-top: 220px;
+  background-color: #73db7a; }
+  .section_6 .sticky {
+    width: 120px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #faff00; }
