@@ -2,7 +2,7 @@
 
 $(function () {
     //new 
-   
+
     //
 
     TweenMax.fromTo(".section_1 .title", 1, {
@@ -31,7 +31,7 @@ $(function () {
     //四個物件動畫
 
 
- var controller = new ScrollMagic.Controller();
+    var controller = new ScrollMagic.Controller();
 
     var tween_4 = TweenMax.staggerFromTo('.wide_4x .item', .8, {
         //做事情
@@ -44,20 +44,20 @@ $(function () {
 
 
     var scene_t = new ScrollMagic.Scene({
-      //做事情
-      triggerElement: "#trigger1",
-      duration: 450,
-      offset: 100
-    //   reverse: false,
-    })
-    .setTween(tween_4)
-    .addIndicators({
+            //做事情
+            triggerElement: "#trigger1",
+            duration: 450,
+            offset: 100
+            //   reverse: false,
+        })
+        .setTween(tween_4)
+        .addIndicators({
             name: 'scene 01'
         })
-   .addTo(controller);
+        .addTo(controller);
 
 
-     
+
 
 
 
@@ -96,7 +96,7 @@ $(function () {
     ////parallax 滾動視差套件 
 
 
- 
+
     var parallax_scroll = TweenMax.staggerFromTo(['.parallax_area', '.parallax_area_01'], 2, {
         //做事情
         opacity: 0,
@@ -109,22 +109,39 @@ $(function () {
     }, 1)
 
 
-     var scene_p = new ScrollMagic.Scene({
-      //做事情
-      triggerElement: "#trigger2",
-      duration: 250,
-      offset: 50,
-      reverse: true,
-    })
-    .setTween(parallax_scroll)
-    .addIndicators({
+    var scene_p = new ScrollMagic.Scene({
+            //做事情
+            triggerElement: "#trigger2",
+            duration: 250,
+            offset: 50,
+            reverse: true,
+        })
+        .setTween(parallax_scroll)
+        .addIndicators({
             name: 'parallax'
         })
-   .addTo(controller);
+        .addTo(controller);
 
 
 
 
     var scence = document.getElementById('scenes');
     var parallax = new Parallax(scence);
+    ////增加class
+
+
+  var scene_bg = new ScrollMagic.Scene({
+            //做事情
+            triggerElement: "#trigger3",
+            offset: 50,
+        })
+        .setClassToggle('.bgc' , 'fadein')
+        .addIndicators({
+            name: 'add_class'
+        })
+        .addTo(controller);
+
+
+
+
 })

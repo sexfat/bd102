@@ -5914,3 +5914,17 @@ h1 {
     height: 500px;
     background-color: #d2691e;
     opacity: 0.8; }
+
+.section_04 {
+  background-color: #d51043;
+  padding-top: 350px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  text-align: center;
+  color: #d51043; }
+  .section_04.bgc.fadein {
+    background-color: #ffa500;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear; }
