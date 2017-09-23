@@ -5806,6 +5806,18 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  letter-spacing: 0.01rem;
+  word-spacing: 2px; }
+
 h1 {
   margin: 0;
   padding: 0; }

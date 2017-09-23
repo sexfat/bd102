@@ -1,4 +1,6 @@
 @import "../libs/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "base/setting";
+@import "mixins/setting";
 
 //初始化
 h1 {
