@@ -96,22 +96,35 @@ $(function () {
     ////parallax 滾動視差套件 
 
 
-    var scence = document.getElementById('scenes');
-    var parallax = new Parallax(scence);
-    
-    TweenMax.staggerFromTo(['.parallax_area', '.parallax_area_01'], 2, {
+ 
+    var parallax_scroll = TweenMax.staggerFromTo(['.parallax_area', '.parallax_area_01'], 2, {
         //做事情
         opacity: 0,
-        y: 50,
-        x: 20
+        x: -100
     }, {
         opacity: 1,
-        y: 0,
         x: 0,
         delay: .5,
         ease: Expo.easeOut
     }, 1)
 
 
- 
+     var scene_p = new ScrollMagic.Scene({
+      //做事情
+      triggerElement: "#trigger2",
+      duration: 250,
+      offset: 50,
+      reverse: true,
+    })
+    .setTween(parallax_scroll)
+    .addIndicators({
+            name: 'parallax'
+        })
+   .addTo(controller);
+
+
+
+
+    var scence = document.getElementById('scenes');
+    var parallax = new Parallax(scence);
 })
