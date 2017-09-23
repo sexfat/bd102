@@ -96,9 +96,22 @@ $(function () {
     ////parallax 滾動視差套件 
 
 
+    var scence = document.getElementById('scenes');
+    var parallax = new Parallax(scence);
+    
+    TweenMax.staggerFromTo(['.parallax_area', '.parallax_area_01'], 2, {
+        //做事情
+        opacity: 0,
+        y: 50,
+        x: 20
+    }, {
+        opacity: 1,
+        y: 0,
+        x: 0,
+        delay: .5,
+        ease: Expo.easeOut
+    }, 1)
 
 
-
-
-
+ 
 })
