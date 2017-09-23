@@ -5883,3 +5883,17 @@ h1 {
     border: 1px solid #000;
     background-color: palegreen;
     height: 400px; }
+  .section_2 .box_1 {
+    position: relative;
+    top: 30px;
+    left: 450px;
+    background-color: #f34;
+    height: 120px;
+    width: 150px; }
+  .section_2 .box_2 {
+    position: relative;
+    top: 90px;
+    left: 490px;
+    background-color: #000;
+    height: 120px;
+    width: 150px; }
