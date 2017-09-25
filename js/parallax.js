@@ -311,20 +311,38 @@ $(function () {
     }));
 
     var scene_s = new ScrollMagic.Scene({
-        triggerElement: "#trigger5",
-        duration: '300%',
-        //畫面最上緣
-        triggerHook: 0,
-        //只出現一次
-        // reverse: false,
-    })
-    .setPin('.section_6')
-    .setTween(tlt)
-    .addIndicators({
-        name: 'stickview'
-    })
-    .addTo(controller);
-    console.log('stick view ok')
+            triggerElement: "#trigger5",
+            duration: '300%',
+            //畫面最上緣
+            triggerHook: 0,
+            //只出現一次
+            // reverse: false,
+        })
+        .setPin('.section_6')
+        .setTween(tlt)
+        .addIndicators({
+            name: 'stickview'
+        })
+        .addTo(controller);
+    console.log('stick view ok');
+
+
+    //影片
+
+    var scene_statement = new ScrollMagic.Scene({
+            triggerElement: "#trigger6",
+        })
+        .triggerElement("#bgvid")
+        .on("enter", function () {
+            $('video').get(0).play();
+         })
+         .addIndicators({
+            name: 'video'
+        })
+        .addTo(controller);
+        console.log('video ok');
+
+
 
 
 
