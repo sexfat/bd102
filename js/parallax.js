@@ -213,6 +213,8 @@ $(function () {
 
     ////pin 住
 
+
+
     var wipeAnimation = new TimelineMax()
         // animate to second panel
         .to("#slideContainer", 0.5, {
@@ -246,6 +248,92 @@ $(function () {
         .to("#slideContainer", 0.5, {
             z: 0
         });
+
+
+    ////timelinemax 兩種寫法
+
+    //第一種
+    var tlo = new TimelineMax({
+        delay: 4,
+        repeat: 1,
+        repeatDelay: 1
+    });
+    tlo.add(TweenMax.to('.textscroll_1', 2, {
+        left: 500
+    }));
+
+    tlo.add(TweenMax.to('.textscroll_2', 2, {
+        top: 100
+    }));
+    //第二種
+    var tl2 = new TimelineMax();
+
+    tl2.to('.textscroll_3', 4, {
+        opacity: 0,
+        scale: 10
+    }).to('.textscroll_4', 1, {
+        right: 100
+    });
+
+    //第三種
+    var tl3 = new TimelineMax();
+
+    var tweenmax_04 = TweenMax.to('.textscroll_5', 1, {
+        right: 100
+    });
+    var tweenmax_05 = TweenMax.to('.textscroll_6', 1, {
+        top: 300,
+        scale: 1.5
+    });
+
+    tl3.add([tweenmax_04, tweenmax_05]);
+
+    //set 是用在直接表示結果的
+    //  tl3.set('.textscroll_5',{scale: 1.4})
+    //      .to('.textscroll_6',1,{left: 100});
+
+
+    //固定住畫面寫法
+
+    var tlt = new TimelineMax();
+
+    tlt.add(TweenMax.to('.textscroll_7', 1, {
+        left: 200,
+        opacity: 0
+    }));
+    tlt.add(TweenMax.to('.textscroll_8', 1, {
+        left: 300,
+        opacity: 0
+    }));
+    tlt.add(TweenMax.to('.textscroll_9', 1, {
+        left: 400,
+        opacity: 0
+    }));
+
+    var scene_s = new ScrollMagic.Scene({
+        triggerElement: "#trigger5",
+        duration: '300%',
+        //畫面最上緣
+        triggerHook: 0,
+        //只出現一次
+        // reverse: false,
+    })
+    .setPin('.section_6')
+    .setTween(tlt)
+    .addIndicators({
+        name: 'stickview'
+    })
+    .addTo(controller);
+    console.log('stick view ok')
+
+
+
+
+
+
+
+
+
 
 
 
