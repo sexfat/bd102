@@ -47,7 +47,7 @@ module.exports = function (grunt) {
           watchTask: true,
           server: {
             baseDir: './',
-            index: 'index.html'
+            index: 'parallax.html'
           }
         }
       }
