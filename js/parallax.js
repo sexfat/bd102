@@ -199,10 +199,10 @@ $(function () {
     //// 加入class
     var bgc_scene = new ScrollMagic.Scene({
             triggerElement: "#trigger4",
-            offset: 200,
-            reverse: false
+            offset: 400,
+            reverse: true
         })
-        .setClassToggle('.section_5', 'bgc')
+        .setClassToggle('.section_5 .bg_all', 'bgc')
         .addIndicators({
             name: 'secen 05'
         })

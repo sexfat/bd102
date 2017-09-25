@@ -8,7 +8,6 @@ h1 {
     padding: 0;
 }
 
-
 .section {
     width: 100%;
     height: 100vh;
@@ -101,40 +100,46 @@ h1 {
             line-height: 4rem;
         }
     }
-    .wide_4x{
+    .wide_4x {
         margin-top: 150px;
         .item {
             background-color: #ffe4b5;
             height: 300px;
-            border:  1px solid #d2691e;
+            border: 1px solid #d2691e;
         }
     }
 }
 
-
 .section_5 {
-    background-color: #000;
-    background-image: url('https://placem.at/places');
-    background-size: cover;
-    transform-origin:center;
-    transform: scale(1.2);
-    transition: transform 3s ease-out;
-    will-change: transform;
-    &.bgc {
-        transform: scale(1);
+    
+    overflow: hidden;
+
+    
+    .bg_all {
+        width: 100%;
+        height: 100vh;
+        background-image: url('https://placem.at/places');
+        background-color: #000;
+        background-size: cover;
+        transform-origin: center;
+        transform: scale(1.08);
+        transition: transform 3s ease-out;
+        will-change: transform;
+        &.bgc {
+            transform: scale(1);
+        }
     }
 }
 
 .section_6 {
-   background-color: #ffa07a;
-   text-align: center;
-   .textscroll_1  {
-       position: relative;
-       top: 300px;
-   }
-   .textscroll_2  {
-    position: relative;
-    top: 300px;
-}
-
+    background-color: #ffa07a;
+    text-align: center;
+    .textscroll_1 {
+        position: relative;
+        top: 300px;
+    }
+    .textscroll_2 {
+        position: relative;
+        top: 300px;
+    }
 }
