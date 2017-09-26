@@ -328,24 +328,41 @@ $(function () {
 
 
     //影片
-
+    
     var scene_statement = new ScrollMagic.Scene({
             triggerElement: "#trigger6",
+            duration:'90%'
+           
+
         })
-        .triggerElement("#bgvid")
         .on("enter", function () {
-            $('video').get(0).play();
-         })
-         .addIndicators({
+            document.getElementById('bgvid').play();
+        })
+        .on("leave", function () {
+            document.getElementById('bgvid').pause();
+        })
+        .addIndicators({
             name: 'video'
         })
         .addTo(controller);
-        console.log('video ok');
+    console.log('video ok');
+
+    ////Progress download bar
+    var loadingProgress = 0;
 
 
 
 
+    var progressTl = new TimelineMax({
+         pause: true,
+         onUpdate : processTime,
+    });
 
+   function processTime (){
+    loadingProgress = Math.round(progressTl.progress() * 100);
+     $('#txt_precent').text(loadingProgress + '%');
+     console.log('progress ok');
+   }
 
 
 

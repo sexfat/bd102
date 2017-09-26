@@ -5906,6 +5906,9 @@ h1 {
   height: 100vh;
   box-sizing: border-box; }
 
+body {
+  overflow-x: hidden; }
+
 .box {
   border: 1px solid #d2691e; }
 
@@ -6040,8 +6043,11 @@ h1 {
     top: 150px;
     text-align: left; }
 
-.section_7 {
-  background-color: #9AF383; }
+.section_7 .videos {
+  overflow: hidden; }
+  .section_7 .videos #bgvid {
+    width: 100%;
+    height: 100%; }
 
 .section_8 {
   background-color: #CA83F3; }
