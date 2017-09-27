@@ -2,6 +2,34 @@
 
 $(function () {
 
+    //smooth scroll
+    var windowTop;
+    var limit = 420;
+
+    function parallax() {
+
+        parallaxElem.css({
+
+            "opacity": (1 - (windowTop / limit)),
+            "-webkit-transform": "translate3d(0," + (100 * (windowTop / limit)) + "px,0)",
+            "-ms-transform": "translate3d(0," + (100 * (windowTop / limit)) + "px,0)",
+            "transform": "translate3d(0," + (100 * (windowTop / limit)) + "px,0)"
+
+        });
+        console.log('scroll smooth ok');
+
+
+
+    }
+    $('body').on('scroll', function () {
+        window.requestAnimationFrame(parallax);
+    });
+
+    // console.log('scroll  ok');
+
+
+
+
     TweenMax.fromTo(".section_1 .title", 1, {
         y: -50,
         opacity: 0,
@@ -386,6 +414,21 @@ $(function () {
     function aclsss() {
         addclass.innerHTML = "我加入了";
     }
+
+
+    var scene_p = new ScrollMagic.Scene({
+            triggerElement: "#trigger7",
+            offset: 100,
+            reverse: false
+        })
+        .setTween(progressTl)
+        .addIndicators({
+            name: 'progress ok'
+        })
+        .addTo(controller);
+    console.log('progress ok');
+
+
 
 
 
