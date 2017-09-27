@@ -76,25 +76,36 @@ $(function () {
         });
         ////放大
         area.on('click', function () {
-            //做事情
-            TweenMax.staggerFromTo('.boxarea', 0.5, {
-                opacity: 0,
-                width: '150px',
-                height: '140px',
-                y: -10
-            }, {
-                opacity: '+=0.4',
-                y: 0,
-                width: '200px',
-                height: '180px',
-                scale: 1.5,
-                yoyo: true
-            }, 0.5);
+
+            var areas = new TimelineMax({
+                pause: true,
+                onComplete: parallaxMove,
+            });
+            areas.add(
+                //做事情
+                TweenMax.staggerFromTo('.boxarea', 0.5, {
+                    opacity: 0,
+                    width: '150px',
+                    height: '140px',
+                    y: -10
+                }, {
+                    opacity: '+=0.4',
+                    y: 0,
+                    width: '200px',
+                    height: '180px',
+                    scale: 1.5,
+                    yoyo: true
+                }, 0.5));
+
+            function parallaxMove() {
+                var scene = document.getElementById('parallax_box');
+                var parallax = new Parallax(scene);
+
+            }
         });
 
         //parallax
-        var scene = document.getElementById('parallax_box');
-        var parallax = new Parallax(scene);
+
 
         ////
         move.on('click', function () {
@@ -328,11 +339,11 @@ $(function () {
 
 
     //影片
-    
+
     var scene_statement = new ScrollMagic.Scene({
             triggerElement: "#trigger6",
-            duration:'90%'
-           
+            duration: '90%'
+
 
         })
         .on("enter", function () {
@@ -347,26 +358,42 @@ $(function () {
         .addTo(controller);
     console.log('video ok');
 
-    ////Progress download bar
-    var loadingProgress = 0;
-
-
-
+    ////Progress download bar 跑 0～100 後執行動畫
 
     var progressTl = new TimelineMax({
-         pause: true,
-         onUpdate : processTime,
+        pause: true,
+        onUpdate: processTime,
+        onComplete: aclsss,
     });
 
-   function processTime (){
-    loadingProgress = Math.round(progressTl.progress() * 100);
-     $('#txt_precent').text(loadingProgress + '%');
-     console.log('progress ok');
-   }
+    //跑完這個動畫後  執行aclass 這個function
+    progressTl.to('.progress', 5, {
+        width: 0
+    })
 
 
 
 
+    var loadingProgress = 0,
+        time = document.getElementById('txt_precent'),
+        addclass = document.getElementById('addclass');
+
+
+    function processTime() {
+        time.innerHTML = progressTl.time().toFixed(4);
+    }
+
+    function aclsss() {
+        addclass.innerHTML = "我加入了";
+    }
+
+
+
+    //    function processTime (){
+    //     loadingProgress = Math.round(progressTl.progress() * 100);
+    //      $('#txt_precent').text(loadingProgress + '%');
+    //      console.log('progress ok');
+    //    }
 
 
 
