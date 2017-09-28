@@ -2,30 +2,44 @@
 
 $(function () {
 
-    //smooth scroll
-    var windowTop;
-    var limit = 420;
+    // //smooth scroll
+    // var windowTop;
+    // var limit = 420;
 
-    function parallax() {
+    // function parallax() {
 
-        parallaxElem.css({
+    //     parallaxElem.css({
 
-            "opacity": (1 - (windowTop / limit)),
-            "-webkit-transform": "translate3d(0," + (100 * (windowTop / limit)) + "px,0)",
-            "-ms-transform": "translate3d(0," + (100 * (windowTop / limit)) + "px,0)",
-            "transform": "translate3d(0," + (100 * (windowTop / limit)) + "px,0)"
+    //         "opacity": (1 - (windowTop / limit)),
+    //         "-webkit-transform": "translate3d(0," + (100 * (windowTop / limit)) + "px,0)",
+    //         "-ms-transform": "translate3d(0," + (100 * (windowTop / limit)) + "px,0)",
+    //         "transform": "translate3d(0," + (100 * (windowTop / limit)) + "px,0)"
 
-        });
-        console.log('scroll smooth ok');
+    //     });
+    //     console.log('scroll smooth ok');
 
 
 
-    }
-    $('body').on('scroll', function () {
-        window.requestAnimationFrame(parallax);
-    });
+    // }
+    // $('body').on('scroll', function () {
+    //     window.requestAnimationFrame(parallax);
+    // });
 
-    // console.log('scroll  ok');
+    console.log('scroll  ok');
+
+
+     //smooth scroll part2
+     
+     
+    //  var scrollbar = Scrollbar.init(document.getElementById('container_box'), { speed : 1.5});
+
+    //  var scrollbar =   Scrollbar.init(document.getElementById('scrollbar'),{speed: 0.7});
+    //===========================================
+    //http://idiotwu.github.io/smooth-scrollbar/
+    //===========================================
+    
+
+     console.log('scroll part2  ok');
 
 
 
@@ -53,8 +67,29 @@ $(function () {
     console.log('section_1 ok');
 
     //parallax 全域作用域
-    var scene = document.getElementById('scenes');
-    var parallax = new Parallax(scene);
+
+
+
+    //動畫後載入滾動式差
+    var progressTl = new TimelineMax({
+        pause: true,
+        //去找goInto函式
+        onComplete: goInto,
+    });
+
+    progressTl.add(TweenMax.staggerFromTo('.move_area', 1, {
+        x: -100,
+        opacity: 0
+    }, {
+        x: 0,
+        opacity: 1
+    }, 0.9))
+
+
+    function goInto() {
+        var scene = document.getElementById('scenes');
+        var parallax = new Parallax(scene);
+    }
 
 
     console.log('parallax ok');

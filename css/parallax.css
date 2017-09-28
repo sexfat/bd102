@@ -5934,6 +5934,8 @@ body {
     height: 500px;
     background-color: #d2691e;
     opacity: 0.8; }
+  .section_2 #scenes .move_area {
+    position: absolute; }
 
 .section_3 {
   background-color: #000;
