@@ -162,6 +162,9 @@ table {
 header {
   height: 30px; }
 
+.paper {
+  text-align: center; }
+
 .btn-small, .btn-medium, .btn-large {
   border: 2px solid #000;
   color: #fff;
