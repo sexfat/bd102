@@ -48,6 +48,7 @@ module.exports = function (grunt) {
           server: {
             baseDir: './',
             index: 'tweenmax.html'
+
           }
         }
       }

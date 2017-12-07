@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>parallax</title>
+    <link rel="stylesheet" href="libs/smooth-scrollbar/dist/smooth-scrollbar.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <script type="text/javascript" src="libs/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+    <!-- jquery -->
+    <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+    <!-- TweenMax -->
+    <script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <!-- scrollmagic -->
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+   
+    <!-- parallax  -->
+    <script type="text/javascript" src="js/parallax.min.js"></script>
+
+
+
+
+</head>
+
+<body id="scrollbar">
+    <div id="container_box" scrollbar>
+        <section class="section_1 section">
+            <h1 class="title">tweenmax</h1>
+            <p class="content">Browse our selection of free responsive HTML Templates</p>
+        </section>
+
+        <section class="section section_2">
+            <div id="scenes" data-hover-only="true">
+                <div class="parallax_area move_area" data-depth="0.6">parallax</div>
+                <div class="parallax_area_01 move_area" data-depth="0.4">parallax_01</div>
+            </div>
+        </section>
+
+        <section class="section_3 section">
+            <nav class="container">
+                <div id="btn_hover" href="">click 產生動畫</div>
+                <div id="btn_scare" href="">click 放大</div>
+                <div id="btn_move" href="">click 橫向</div>
+            </nav>
+            <div class="container">
+                <div class="wrapper col-md-6 box">
+
+                    <div class="text1 com">我的小朋友呀</div>
+                    <div class="text2 com">我的小朋友呀</div>
+                    <div class="text3 com">我的小朋友呀</div>
+                    <div class="text4 com">我的小朋友呀</div>
+                    <div class="text5 com">我的小朋友呀</div>
+
+                </div>
+
+                <div class="wrapper col-md-6 box">
+
+                    <div class="text1 comw">按鈕按下顯示</div>
+                    <div class="text2 comw">按鈕按下顯示</div>
+                    <div class="text3 comw">按鈕按下顯示</div>
+                    <div class="text4 comw">按鈕按下顯示</div>
+                    <div class="text5 comw">按鈕按下顯示</div>
+                </div>
+                <div id="parallax_box" class="wrapper col-md-6 box" data-hover-only="true">
+                    <div class="boxarea" data-depth="0.2"></div>
+                    <div class="boxarea" data-depth="0.4"></div>
+                    <div class="boxarea" data-depth="0.6"></div>
+                    <div class="boxarea" data-depth="0.8"></div>
+
+                </div>
+                <div class="wrapper col-md-6 box">
+                    <div class="animation_box">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section_4 section">
+            <div id="trigger1"></div>
+            <div id="trigger2"></div>
+            <div class="wrapper">
+                <h1 class="title_4">Scrollmagic Start</h1>
+                <div class="content_4">ScrollMagic helps you to easily react to the user's current scroll position</div>
+            </div>
+            <div id="trigger3"></div>
+            <ul class="wide_4x container">
+                <li class="item col-md-3"></li>
+                <li class="item col-md-3"></li>
+                <li class="item col-md-3"></li>
+                <li class="item col-md-3"></li>
+            </ul>
+        </section>
+        <div id="trigger4"></div>
+        <section class="section section_5">
+            <div class="wrapper bg_all">
+            </div>
+        </section>
+        <div id="trigger5"></div>
+        <section class="section section_6">
+            <div class="wrapper">
+                <div class="textscroll_1">
+                    <h1>Scroll TEXT</h1>
+                </div>
+                <div class="textscroll_2">
+                    <h1>Scroll TEXT2</h1>
+                </div>
+                <div class="textscroll_3">
+                    <h1>Scroll TEXT3</h1>
+                </div>
+                <div class="textscroll_4">
+                    <h1>Scroll TEXT4</h1>
+                </div>
+                <div class="textscroll_5">
+                    <h1>Scroll TEXT5</h1>
+                </div>
+                <div class="textscroll_6">
+                    <h1>Scroll TEXT6</h1>
+                </div>
+                <div class="textscroll_7">
+                    <h1>Scroll TEXT7</h1>
+                </div>
+                <div class="textscroll_8">
+                    <h1>Scroll TEXT8</h1>
+                </div>
+                <div class="textscroll_9">
+                    <h1>Scroll TEXT9</h1>
+                </div>
+            </div>
+        </section>
+        <div id="trigger6"></div>
+        <section class="section section_7">
+            <div class="wrapper videos">
+                <video poster="http://lookbook.cruxkitchen.com/c/crux/uploads/zva_bank_img.file/img-video-copper-accent.jpg" loop="loop"
+                    id="bgvid">
+                    <source src="http://lookbook.cruxkitchen.com/c/crux/uploads/zva_bank_docs.file/copperstyle-desktop.mov-1.mp4" type="video/mp4">
+                    <!-- <source media="(min-width:1920px ) 100vw ,1920px" srcset="http://lookbook.cruxkitchen.com/c/crux/uploads/zva_bank_img.file/img-video-copper-accent.jpg" type="video/mp4">     -->
+                </video>
+            </div>
+        </section>
+        <div id="trigger7"></div>
+
+        <section class="section section_8">
+            <div class="wrapper">
+                <h1>Proloader</h1>
+                <div id="preloader">
+                    <div class="txt">
+                        <h1 id="txt_precent">
+                            0%
+                        </h1>
+                        <div class="progress">
+                            <span></span>
+                        </div>
+                        <h1 id="addclass"></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section_9">
+            <div class="wrapper">
+
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="js/parallax.js"></script>
+</body>
+
+</html>

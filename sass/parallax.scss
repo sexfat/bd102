@@ -1,0 +1,197 @@
+@import "../libs/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "base/setting";
+@import "mixins/setting";
+@include grid-col(12);
+//初始化
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.box {
+    border: 1px solid #d2691e;
+}
+
+//end
+.section_1 {
+    padding-top: 500px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+}
+
+.section_2 {
+    #scenes {
+        position: relative;
+        width: 70%;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #2c62de;
+        .parallax_area {
+            width: 440px;
+            height: 500px;
+            background-color: #2c62de;
+        }
+        .parallax_area_01 {
+            width: 440px;
+            height: 500px;
+            background-color: #d2691e;
+            opacity: .8
+        }
+        .move_area {
+            position: absolute;
+        }
+    }
+}
+
+.section_3 {
+    background-color: #000;
+    color: #fff;
+    padding-top: 20px;
+    .wrapper {
+        min-height: 400px;
+        padding-top: 10px;
+        .comw {
+            opacity: 0
+        }
+    }
+    #btn_hover,
+    #btn_scare,
+    #btn_move {
+        width: 120px;
+        height: 30px;
+        border: 1px solid #d2691e;
+        padding: 5px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+    }
+    .boxarea {
+        //    width: 150px;
+        //    height: 140px;
+        position: absolute;
+        background-color: #2c62de;
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                opacity: $i * 0.2;
+                margin-left: $i * 5px;
+                margin-top: $i * 4px;
+            }
+        }
+    }
+    .animation_box {
+        width: 0;
+        height: 150px;
+        background-color: #2c62de;
+    }
+}
+
+.section_4 {
+    background-color: #ffa500;
+    padding-top: 10%;
+    .wrapper {
+        text-align: center;
+        .title_4 {
+            line-height: 4rem;
+        }
+    }
+    .wide_4x {
+        margin-top: 150px;
+        .item {
+            background-color: #ffe4b5;
+            height: 300px;
+            border: 1px solid #d2691e;
+        }
+    }
+}
+
+.section_5 {
+    overflow: hidden;
+    .bg_all {
+        width: 100%;
+        height: 100vh;
+        background-image: url('https://placem.at/places');
+        background-color: #000;
+        background-size: cover;
+        transform-origin: center;
+        transform: scale(1.08);
+        transition: transform 3s ease-out;
+        will-change: transform;
+        &.bgc {
+            transform: scale(1);
+        }
+    }
+}
+
+.section_6 {
+    background-color: #ffa07a;
+    text-align: center;
+    .textscroll_1 {
+        position: relative;
+        top: 300px;
+    }
+    .textscroll_2 {
+        position: relative;
+        top: 400px;
+    }
+    .textscroll_3 {
+        position: relative;
+        top: 100px;
+    }
+    .textscroll_4 {
+        position: relative;
+        top: 500px;
+    }
+    .textscroll_5 {
+        position: relative;
+        top: 340px;
+    }
+    .textscroll_6 {
+        position: relative;
+        top: 150px;
+        text-align: left;
+    }
+    .textscroll_7 {
+        position: relative;
+        top: 150px;
+        text-align: left;
+    }
+    .textscroll_8 {
+        position: relative;
+        top: 150px;
+        text-align: left;
+    }
+    .textscroll_9 {
+        position: relative;
+        top: 150px;
+        text-align: left;
+    }
+}
+
+.section_7 {
+    // background-color: #9AF383;
+    .videos {
+        overflow: hidden;
+        
+        #bgvid {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.section_8 {
+    background-color: #CA83F3;
+}

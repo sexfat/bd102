@@ -1,9 +1,5 @@
-// work
-
+// // work
 $(function () {
-    //new 
-
-    //
 
     TweenMax.fromTo(".section_1 .title", 1, {
         y: -50,
@@ -24,6 +20,10 @@ $(function () {
         delay: 1.5,
         ease: Quad.easeOut
     });
+
+    console.log('section_1 ok');
+
+TweenMax.set("#quiot" ,{x: 200, y:300});
 
 
     console.log('section_1 ok');
@@ -172,3 +172,4 @@ $(function () {
 
 
 })
+// var mySplitText = new SplitText("#quote");
