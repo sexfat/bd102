@@ -472,10 +472,6 @@ $(function () {
     //      $('#txt_precent').text(loadingProgress + '%');
     //      console.log('progress ok');
     //    }
-
-
-
-
-
-
 });
+
+
